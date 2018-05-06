@@ -1,0 +1,33 @@
+<ion-content>
+  <div  ng-controller="mapCtrl as vm">
+      <ng-map zoom="17"  center="26.816, 75.866"  map-type-id="TERRAIN">
+          <shape name="polygon" 
+            paths="[
+         
+            [26.816, 75.866],
+            [ 26.817,  75.865],
+            [ 26.818,  75.868],
+            [26.815,  75.866]
+            ]"
+            stroke-color="#FF0000"
+            stroke-opacity="0.8"
+            stroke-weight="2"
+            fill-color="#FF0000"
+            fill-opacity="0.35">
+          </shape>
+        
+                     
+            <marker ng-repeat="p in vm.pos" position="{{p}}"></marker>
+            <marker position="current-location" animation="Animation.BOUNCE"></marker>
+      
+        </ng-map>
+  </div>
+    
+  </ion-content> 
+
+
+
+
+
+
+  

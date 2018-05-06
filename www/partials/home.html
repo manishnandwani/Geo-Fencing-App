@@ -1,0 +1,36 @@
+
+<ion-content >
+<div ng-controller="homeCtrl as home" >
+
+   <div ng-show="!home.check()">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password">
+            </label>
+        </div>
+        <button class="button button-block button-balanced">Login </button>    
+
+        <div>        
+            <button  class="button button-block button-assertive"  href="#/menu" ui-sref="menu"  ng-click="home.googlelogin()">
+                <i class="fa fa-google" aria-hidden="true"></i> Google Login
+            </button>      
+            <button class="button button-block button-positive" href="#/menu" ng-click="home.facebooklogin()">
+                <i class="fa fa-facebook" aria-hidden="true"></i> Facebook Login
+            </button>
+        </div>
+    </div>
+
+   
+    {{home.user.displayName}}
+
+
+    
+  
+
+</div>
+</ion-content>
